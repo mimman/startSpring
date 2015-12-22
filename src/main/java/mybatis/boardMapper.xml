@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.boardMapper">
+	<select id="getList" resultType="BoardDto">
+		select * from tblSpringBoard
+		order by b_seq desc
+	</select>
+
+	<insert id="write" parameterType="BoardDto">
+		insert into tblSpringBoard(b_seq,b_title,b_content,b_writer,b_regdate,b_hitcount,b_password)
+		values(seq_board.nextVal,#{b_title},#{b_content},#{b_writer},sysdate,0,0)
+		
+	</insert>
+	<!-- #(변수명) -->
+	<select id="findBySeq" parameterType="int" resultType="BoardDto">
+		select * from tblSpringBoard where b_seq= #{b_seq}
+	</select>
+	
+	<update id="update" parameterType="BoardDto">
+		update tblSpringBoard set b_title=#{b_title}, b_content=#{b_content} where b_seq=#{b_seq}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from tblSpringBoard where b_seq = #{b_seq}
+	</delete>
+</mapper>
