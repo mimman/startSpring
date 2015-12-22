@@ -20,7 +20,7 @@ public class ListController {
 	}
 	@RequestMapping("/list.board")
 	public ModelAndView pageHandler(){
-		ModelAndView mav = new ModelAndView("/WEB-INF/views/board/list.jsp");
+		ModelAndView mav = new ModelAndView("/board/list.jsp");
 		try {
 			List list = boardService.getList();
 			mav.addObject("list",list);

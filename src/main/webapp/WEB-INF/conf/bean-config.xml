@@ -13,4 +13,19 @@
 		<property name="boardService" ref="boardService" />
 	</bean>
 
+	<bean class="com.mimman.board.controller.writeController">
+		<property name="boardService" ref="boardService" />
+	</bean>
+
+	<bean class="com.mimman.board.controller.ReadController">
+		<property name="boardService" ref="boardService"></property>
+	</bean>
+
+<bean class="com.mimman.board.controller.deleteController">
+		<property name="boardService" ref="boardService"></property>
+	</bean>
+	
+	<bean class="com.mimman.board.controller.updateController">
+		<property name="boardService" ref="boardService"></property>
+	</bean>
 </beans>

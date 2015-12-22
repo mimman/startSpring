@@ -13,3 +13,7 @@ create sequence seq_board;
 insert into tblSpringBoard(b_seq,b_title,b_content,b_writer,b_regdate,b_hitcount,b_password) values(seq_board.nextVal,'첫번째 글입니다','aaaaa','홍길동',sysdate,0,'1111');
 
 select * from tblSpringBoard;
+
+delete from TBLSPRINGBOARD where b_seq = 3;
+
+select * from tblSpringBoard order by b_seq desc

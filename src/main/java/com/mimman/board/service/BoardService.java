@@ -10,7 +10,7 @@ public interface BoardService {
 	public List getList() throws SQLException;
 	
 	//특정 글 가져오기
-	public BoardDto findBySeq() throws SQLException;
+	public BoardDto findBySeq(int seq) throws SQLException;
 	
 	//글 저장하기
 	public void write(BoardDto dto) throws SQLException;

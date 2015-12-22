@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>리스트 페이지</h1>
-	<a href="">글쓰기</a>
+	<a href="write.board">글쓰기</a>
 	<br />
 	<br />
 	<table border="1">
@@ -20,7 +20,7 @@
 		</tr>
 		<c:forEach var="dto" items="${list}"> 
 		<tr>
-			<td>${dto.getB_seq()}</td>
+			<td><a href="read.board?b_seq=${dto.b_seq}">${dto.getB_seq()}</a></td>
 			<td>${dto.getB_title()}</td>
 			<td>${dto.getB_writer()}</td>
 			<td>${dto.getB_regdate()}</td>
