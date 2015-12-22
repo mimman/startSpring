@@ -6,7 +6,7 @@
 
 
 	<bean id="boardService" class="com.mimman.board.service.BoardServiceImpl">
-		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<!-- <property name="jdbcTemplate" ref="jdbcTemplate"></property> -->
 	</bean>
 
 	<bean class="com.mimman.board.controller.ListController">
