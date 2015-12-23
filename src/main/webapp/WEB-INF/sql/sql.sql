@@ -17,3 +17,17 @@ select * from tblSpringBoard;
 delete from TBLSPRINGBOARD where b_seq = 3;
 
 select * from tblSpringBoard order by b_seq desc
+
+create table MEMBER(
+	ID 			number  primary key,
+    EMAIL 		varchar2(255), 
+    PASSWORD	varchar2(100),
+    NAME		varchar2(100),
+    REGDATE		date
+    
+)
+
+create sequence seq_member
+select * from member
+
+drop table MEMBER

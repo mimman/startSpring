@@ -8,6 +8,8 @@
 	<bean id="boardService" class="com.mimman.board.service.BoardServiceImpl">
 		<!-- <property name="jdbcTemplate" ref="jdbcTemplate"></property> -->
 	</bean>
+	
+	<bean id="memService" class="com.mimman.member.service.MemberServiceImpl"/>
 
 	<bean class="com.mimman.board.controller.ListController">
 		<property name="boardService" ref="boardService" />
@@ -27,5 +29,9 @@
 	
 	<bean class="com.mimman.board.controller.updateController">
 		<property name="boardService" ref="boardService"></property>
+	</bean>
+	
+	<bean class="com.mimman.member.controller.RegisterController">
+		<property name="memberServiceImpl" ref="memService"></property>
 	</bean>
 </beans>

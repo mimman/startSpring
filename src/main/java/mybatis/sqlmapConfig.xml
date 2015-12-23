@@ -9,6 +9,8 @@
 <!-- 별명을 줘서 긴 경로를 간편하게 사용할 수 있도록 설정한다 -->
 	<typeAliases>
 		<typeAlias type="com.mimman.board.repository.BoardDto" alias="BoardDto"/>
+		<typeAlias type="com.mimman.member.repository.Member" alias="Member" />
+		<typeAlias type="com.mimman.member.repository.RegisterRequest" alias="RegisterRequest"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -24,5 +26,6 @@
 	</environments>
 	<mappers>
 		<mapper resource="mybatis/boardMapper.xml" />
+		<mapper resource="mybatis/memberMapper.xml" />
 	</mappers>
 </configuration>

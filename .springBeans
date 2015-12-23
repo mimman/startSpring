@@ -11,6 +11,7 @@
 		<config>src/main/webapp/WEB-INF/conf/bean-config.xml</config>
 		<config>src/main/webapp/WEB-INF/conf/view-config.xml</config>
 		<config>src/main/webapp/WEB-INF/conf/applicationContext.xml</config>
+		<config>src/main/webapp/WEB-INF/conf/mvc-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
